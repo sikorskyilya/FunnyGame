@@ -29,6 +29,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = Movement)
+	bool IsCameraLock = false;
+
 protected:
 
 	/** Resets HMD orientation in VR. */
