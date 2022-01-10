@@ -40,6 +40,9 @@ public:
 	UPROPERTY(VisibleAnyWhere, BlueprintReadWrite, Category = "Components")
 		int32 ActorState = 0;
 
+	UPROPERTY(VisibleAnyWhere, BlueprintReadWrite, Category = "Components")
+		float Distance = 0.0f;
+
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 		void ChangeOnActorState();
 

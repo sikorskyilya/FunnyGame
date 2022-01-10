@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Skills/BaseSkill.h"
 #include "BaseProjectileSkillComponent.generated.h"
 
 
@@ -15,7 +16,8 @@ class FUNNYGAME_API UBaseProjectileSkillComponent : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UBaseProjectileSkillComponent();
-
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Weapon")
+		TSubclassOf<ABaseSkill> SkillClass;
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
