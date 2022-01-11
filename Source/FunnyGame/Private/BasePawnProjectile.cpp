@@ -3,10 +3,10 @@
 
 #include "BasePawnProjectile.h"
 #include "Components/BaseProjectileSkillComponent.h"
-// Sets default values
+
 ABasePawnProjectile::ABasePawnProjectile()
 {
- 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+
 	PrimaryActorTick.bCanEverTick = true;
 
 	ProjectileMesh = CreateDefaultSubobject<USkeletalMeshComponent>("ProjectileMesh");
@@ -20,7 +20,10 @@ ABasePawnProjectile::ABasePawnProjectile()
 void ABasePawnProjectile::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	if (TrebushetParent)
+	{
+		GetWorld()->SpawnActor<SkillComponent->GetClass()>((SkillComponent->GetClass(), Vector.Zero(), Rotation.Zero());
+	}
 }
 
 // Called every frame
@@ -42,4 +45,3 @@ void ABasePawnProjectile::SetupPlayerInputComponent(UInputComponent* PlayerInput
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 	PlayerInputComponent->BindAction("SetNextActorState", IE_Pressed, this, &ABasePawnProjectile::SetNextActorState);
 }
-

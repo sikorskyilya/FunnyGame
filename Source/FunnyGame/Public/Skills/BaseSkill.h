@@ -20,7 +20,9 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
-	// Called every frame
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+		void Skill();
+
 	virtual void Tick(float DeltaTime) override;
 
 };
